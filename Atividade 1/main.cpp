@@ -1,5 +1,4 @@
 #include <iostream>
-#include <locale.h>
 #include <string>
 using namespace std;
 
