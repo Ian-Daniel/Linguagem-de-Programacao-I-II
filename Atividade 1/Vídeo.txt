@@ -1,0 +1,1 @@
+Segue o link para o vídeo que mostra o sistema, sua modularização, o Makefile e as dificuldades enfrentadas no processo de criação do projeto: https://www.loom.com/share/153bcfd48fd54fa982971a2ae9b8c9a1?sid=b985f49a-527e-40e0-85a9-04da2efe96c3

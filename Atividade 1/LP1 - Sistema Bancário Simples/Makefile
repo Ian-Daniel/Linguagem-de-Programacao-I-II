@@ -1,24 +1,28 @@
-# Nome do executável final em questão.
-EXEC = LP1 - Sistema Bancário Simples
-
 # Compilador e flags.
 CXX = g++
-CXXFLAGS = -Wall -std=c++11
+CXXFLAGS = -Wall -Wextra -std=c++17
 
-# Fontes e objetos.
-SRC = main.cpp ContaBancaria.cpp Cliente.cpp
+# Arquivos-fonte e objetos.
+SRC = main.cpp Cliente.cpp ContaBancaria.cpp
 OBJ = $(SRC:.cpp=.o)
 
-# Regra padrão.
-all: $(EXEC)
+# Nome do executável final.
+TARGET = programa
 
-$(EXEC): $(OBJ)
+# Regra principal.
+all: $(TARGET)
+
+$(TARGET): $(OBJ)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
-# Compilação individual dos arquivos .cpp em .o.
+# Regra para arquivos .o.
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-# Limpa os arquivos gerados.
+# Limpa arquivos de build.
 clean:
-	rm -f *.o $(EXEC)
+	rm -f $(OBJ) $(TARGET)
+
+# Facilita testes e execução.
+run: $(TARGET)
+	./$(TARGET)
