@@ -27,7 +27,7 @@ O sistema simula o gerenciamento de pedidos de um restaurante, permitindo regist
 ## 📂 Estrutura do Projeto
 
 ```
-sistema-pedidos/
+Laboratório 1/
 │── src/
 │ ├── Item.java # Classe que representa um item (nome, preço)
 │ ├── Pedido.java # Classe que representa um pedido (id, cliente, itens)
@@ -61,7 +61,7 @@ java -cp bin RaboCheio
 Escolha uma opção: 1
 Nome do cliente: Ian
 Nome do item: PF
-Preço do item: R$ 12.99
+Preço do item: R$ 12,99
 Deseja adicionar outro item? (s/n): n
 
 Pedido registrado com sucesso!
@@ -73,9 +73,9 @@ Pedido N°: 1
 Cliente: Ian
 ----------------------------------------
 Itens:
-- PF R$ 12.99
+- PF R$ 12,99
 ----------------------------------------
-Total: R$ 12.99
+Total: R$ 12,99
 ========================================
    Obrigado pela preferência! :)
 ========================================
@@ -83,5 +83,5 @@ Total: R$ 12.99
 
 ## 👨‍💻 Autor
 
-- **Ian Daniel Varela Marques**
-Disciplina **LP II (IMD0040) - UFRN / IMD**
+- **Ian Daniel Varela Marques**;
+Disciplina: **Lingugagem de Programação II (IMD0040) - UFRN / IMD**
