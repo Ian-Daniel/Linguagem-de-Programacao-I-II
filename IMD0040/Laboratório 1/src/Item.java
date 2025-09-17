@@ -1,6 +1,6 @@
 public class Item {
-    private String nome;
-    private double preco;
+    private final String nome;
+    private final double preco;
 
     public Item(String nome, double preco) {
         this.nome = nome;
@@ -17,6 +17,6 @@ public class Item {
 
     @Override
     public String toString() {
-        return nome + " - R$ " + String.format("%.2f", preco);
+        return "- " + nome + " R$ " + String.format("%.2f", preco);
     }
 }

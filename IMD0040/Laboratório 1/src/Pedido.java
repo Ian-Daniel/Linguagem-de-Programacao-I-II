@@ -1,14 +1,17 @@
 import java.util.ArrayList;
 
 public class Pedido {
-    private int numero;
-    private String cliente;
+    private int numero = 0;
+    private String cliente = null;
     private ArrayList<Item> itens;
 
     public Pedido(int numero, String cliente) {
-        this.numero = numero;
+        this.numero = numero;  
         this.cliente = cliente;
         this.itens = new ArrayList<>();
+    }
+
+    public Pedido() {
     }
 
     public int getNumero() {
@@ -37,7 +40,7 @@ public class Pedido {
 
     public void exibirNotaFiscal() {
         System.out.println("\n========================================");
-        System.out.println("       Restaurante Sabores da Casa       ");
+        System.out.println("       Restaurante Rabo Cheio       ");
         System.out.println("========================================");
         System.out.println("Pedido N°: " + numero);
         System.out.println("Cliente: " + cliente);

@@ -1,39 +1,30 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class SistemaRestaurante {
-    private static ArrayList<Pedido> pedidos = new ArrayList<>();
+public class RaboCheio {
+    private static final ArrayList<Pedido> pedidos = new ArrayList<>();
     private static int contadorPedidos = 1;
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         int opcao;
         do {
             exibirMenu();
             opcao = scanner.nextInt();
-            scanner.nextLine(); // consumir quebra de linha
+            scanner.nextLine(); // Consumir quebra de linha.
 
             switch (opcao) {
-                case 1:
-                    registrarPedido();
-                    break;
-                case 2:
-                    removerPedido();
-                    break;
-                case 3:
-                    listarPedidos();
-                    break;
-                case 4:
-                    System.out.println("Encerrando o sistema... Até logo!");
-                    break;
-                default:
-                    System.out.println("Opção inválida! Tente novamente.");
+                case 1 -> registrarPedido();
+                case 2 -> removerPedido();
+                case 3 -> listarPedidos();
+                case 4 -> System.out.println("Encerrando o sistema... Até logo!");
+                default -> System.out.println("Opção inválida! Tente novamente.");
             }
         } while (opcao != 4);
     }
 
     private static void exibirMenu() {
-        System.out.println("===== Sistema de Gerenciamento de Pedidos =====");
+        System.out.println("===== Sistema de Gerenciamento de Pedidos do Restaurante Rabo Cheio =====");
         System.out.println("1. Registrar Pedido");
         System.out.println("2. Remover Pedido");
         System.out.println("3. Listar Pedidos");
