@@ -84,4 +84,4 @@ Total: R$ 12,99
 ## 👨‍💻 Autor
 
 - **Ian Daniel Varela Marques**;
-Disciplina: **Lingugagem de Programação II (IMD0040) - UFRN / IMD**
+Disciplina: **Linguagem de Programação II (IMD0040) - UFRN / IMD**
