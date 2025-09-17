@@ -24,7 +24,7 @@ O sistema simula o gerenciamento de pedidos de um restaurante, permitindo regist
 
 ---
 
-## 📂 Estrutura do Projeto
+## 📂 Estrutura do projeto
 
 ```
 Laboratório 1/
@@ -37,7 +37,7 @@ Laboratório 1/
 
 ---
 
-## ▶️ Como Compilar e Executar
+## ▶️ Como compilar e executar
 Dentro da pasta do projeto:
 
 ```bash
@@ -50,7 +50,7 @@ java -cp bin RaboCheio
 
 - Certifique-se de ter o *Java JDK* instalado e configurado no PATH.
 
-## 📌 Exemplo de Uso
+## 📌 Exemplo de uso
 
 ```
 --- Sistema de Gerenciamento de Pedidos ---
