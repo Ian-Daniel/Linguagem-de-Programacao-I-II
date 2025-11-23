@@ -1,0 +1,12 @@
+package com.ufrn.elenco.model;
+
+import lombok.Data;
+
+@Data
+public class Jogador {
+    private Long id;
+    private String nome;
+    private String posicao;
+    private String fotoUrl;
+    private String descricao;
+}
