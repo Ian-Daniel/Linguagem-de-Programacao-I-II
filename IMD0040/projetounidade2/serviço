@@ -1,0 +1,45 @@
+package com.ufrn.elenco.service;
+
+import com.ufrn.elenco.model.Jogador;
+import com.ufrn.elenco.repository.JogadorRepository;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class JogadorService {
+
+    private final JogadorRepository repo;
+
+    public JogadorService(JogadorRepository repo) {
+        this.repo = repo;
+    }
+
+    public List<Jogador> listar() {
+        return repo.findAll();
+    }
+
+    public Jogador buscar(Long id) {
+        return repo.findById(id).orElse(null);
+    }
+
+    public Jogador criar(Jogador jogador) {
+        return repo.save(jogador);
+    }
+
+    public boolean atualizar(Long id, Jogador jogador) {
+        if (!repo.existsById(id)) {
+            return false;
+        }
+        repo.update(id, jogador);
+        return true;
+    }
+
+    public boolean excluir(Long id) {
+        if (!repo.existsById(id)) {
+            return false;
+        }
+        repo.delete(id);
+        return true;
+    }
+}
