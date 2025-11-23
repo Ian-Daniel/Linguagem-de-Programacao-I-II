@@ -1,0 +1,19 @@
+backend/
+├── pom.xml
+└── src/
+    └── main/
+        ├── java/
+        │   └── com/
+        │       └── ufrn/
+        │           └── elenco/
+        │               ├── ElencoBackendApplication.java
+        │               ├── controller/
+        │               │   └── JogadorController.java
+        │               ├── service/
+        │               │   └── JogadorService.java
+        │               ├── model/
+        │               │   └── Jogador.java
+        │               └── repository/
+        │                   └── JogadorRepository.java
+        └── resources/
+            └── application.properties
