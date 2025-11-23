@@ -1,0 +1,57 @@
+package com.ufrn.elenco.controller;
+
+import com.ufrn.elenco.model.Jogador;
+import com.ufrn.elenco.service.JogadorService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/jogadores")
+public class JogadorController {
+
+    private final JogadorService service;
+
+    public JogadorController(JogadorService service) {
+        this.service = service;
+    }
+
+    @GetMapping
+    public List<Jogador> listar() {
+        return service.listar();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Jogador> buscar(@PathVariable Long id) {
+        Jogador jogador = service.buscar(id);
+        if (jogador == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(jogador);
+    }
+
+    @PostMapping
+    public ResponseEntity<Jogador> criar(@RequestBody Jogador jogador) {
+        Jogador criado = service.criar(jogador);
+        return ResponseEntity.ok(criado);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> atualizar(@PathVariable Long id, @RequestBody Jogador jogador) {
+        boolean atualizado = service.atualizar(id, jogador);
+        if (!atualizado) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.noContent().build();
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> excluir(@PathVariable Long id) {
+        boolean excluido = service.excluir(id);
+        if (!excluido) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.noContent().build();
+    }
+}
