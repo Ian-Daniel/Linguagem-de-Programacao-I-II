@@ -9,7 +9,7 @@ import java.util.*;
 public class JogadorRepository {
 
     private final Map<Long, Jogador> bd = new HashMap<>();
-    private long currentId = 1L;
+    private long currentId = 1;
 
     public List<Jogador> findAll() {
         return new ArrayList<>(bd.values());
@@ -32,9 +32,5 @@ public class JogadorRepository {
 
     public void delete(Long id) {
         bd.remove(id);
-    }
-
-    public boolean existsById(Long id) {
-        return bd.containsKey(id);
     }
 }

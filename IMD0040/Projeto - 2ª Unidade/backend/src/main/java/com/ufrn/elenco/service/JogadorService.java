@@ -27,19 +27,11 @@ public class JogadorService {
         return repo.save(jogador);
     }
 
-    public boolean atualizar(Long id, Jogador jogador) {
-        if (!repo.existsById(id)) {
-            return false;
-        }
+    public void atualizar(Long id, Jogador jogador) {
         repo.update(id, jogador);
-        return true;
     }
 
-    public boolean excluir(Long id) {
-        if (!repo.existsById(id)) {
-            return false;
-        }
+    public void excluir(Long id) {
         repo.delete(id);
-        return true;
     }
 }
